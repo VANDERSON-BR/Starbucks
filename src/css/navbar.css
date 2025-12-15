@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url(../css/variable.css);
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--color-neutral-1);
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 4%;
+
+    .brand {
+      width: 180px;
+    }
+
+    .btn-default {
+      display: none;
+    }
+
+    ul {
+      display: none;
+      flex-direction: column;
+      gap: 0.5rem;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+      background-color: var(--color-neutral-1);
+
+      &.show {
+        display: flex;
+        box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      li {
+        text-align: center;
+        list-style-type: none;
+
+        a {
+          cursor: pointer;
+          text-decoration: none;
+          transition: all 0.5s ease;
+          color: var(--color-neutral-8);
+          font-weight: 500;
+
+          &:hover,
+          &:active {
+            color: var(--color-primary-1);
+            border-bottom: 1px solid var(--color-primary-1);
+          }
+        } /*a*/
+      } /*li*/
+    } /*ul*/
+  } /*navbar*/
+} /*header*/
+
+@media (min-width: 769px) {
+  header {
+    .navbar {
+      .btn-mobile {
+        display: none;
+      }
+
+      .btn-default {
+        display: block;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        position: static;
+        width: auto; /*corrigi espaço faltando*/
+        padding: 0;
+      }
+    }
+  }
+}
