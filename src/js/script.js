@@ -10,13 +10,6 @@ window.addEventListener("scroll" , ()=>{
     } else {
         header.style.boxShadow = "none"
     }
-
-    window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-    });
-
-
 });
 
 navLinks.querySelectorAll("a").forEach((link , index) => {
@@ -37,9 +30,6 @@ mobileBtn.addEventListener("click",()=>{
     navLinks.classList.toggle("show");
     icon.classList.toggle("fa-times");
     icon.classList.toggle("fa-bars");
-
-
-
 });
 
 
